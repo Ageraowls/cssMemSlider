@@ -1,4 +1,159 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: 'Radio Canada', sans-serif;
+  font-size: 1.1rem;
+  line-height: normal;
+  height: 100vh;
+}
+
+h1 {
+  padding-top: 1.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.slider__imgs {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  width: 25rem;
+  height: 18.8rem;
+  border-radius: 3%;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(102, 153, 204, 0.6);
+}
+.slider__img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+img {
+  width: 25rem;
+  height: 19.2rem;
+}
+
+.slider__content {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 5rem;
+  overflow: hidden;
+}
+
+.slider__text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  height: 5rem;
+  flex-shrink: 0;
+  transition: 0.5s;
+}
+
+.navigation {
+  display: flex;
+  justify-content: end;
+}
+
+.bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.circle {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: rgb(245, 245, 245);
+  border: 0.2rem solid #72adff;
+  margin: auto;
+  align-self: center;
+  transition: all 0.5s;
+}
+
+.bar:hover .circle {
+  background-color: #fff;
+  border-color: rgb(40, 44, 53);
+}
+
+.bar:active .circle {
+  background-color: #fff;
+  border-color: rgb(40, 44, 53);
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+input[name='control'] {
+  display: none;
+}
+
+#switch-one:checked ~ .slider__bottom > .navigation > label[for='switch-one'] > .circle,
+#switch-two:checked ~ .slider__bottom > .navigation > label[for='switch-two'] > .circle,
+#switch-three:checked ~ .slider__bottom > .navigation > label[for='switch-three'] > .circle,
+#switch-four:checked ~ .slider__bottom > .navigation > label[for='switch-four'] > .circle {
+  border-color: rgb(40, 44, 53);
+  transform: scale(1.1);
+}
+
+#switch-one:checked ~ .slider__imgs > .slider__img {
+  transform: translate(0);
+}
+
+#switch-two:checked ~ .slider__imgs > .slider__img {
+  transform: translate(-100%);
+}
+
+#switch-three:checked ~ .slider__imgs > .slider__img {
+  transform: translate(-200%);
+}
+
+#switch-four:checked ~ .slider__imgs > .slider__img {
+  transform: translate(-300%);
+}
+
+#switch-one:checked ~ .slider__bottom > .slider__content > .slider__text {
+  transform: translateY(0);
+}
+
+#switch-two:checked ~ .slider__bottom > .slider__content > .slider__text {
+  transform: translateY(-100%);
+}
+
+#switch-three:checked ~ .slider__bottom > .slider__content > .slider__text {
+  transform: translateY(-200%);
+}
+
+#switch-four:checked ~ .slider__bottom > .slider__content > .slider__text {
+  transform: translateY(-300%);
 }
