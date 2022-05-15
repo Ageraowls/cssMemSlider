@@ -15,6 +15,8 @@ body {
 
 h1 {
   padding-top: 1.5rem;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.25rem;
 }
 
 .wrapper {
@@ -33,6 +35,8 @@ h1 {
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1.2rem;
   gap: 1.2rem;
 }
 
@@ -44,8 +48,9 @@ h1 {
   width: 25rem;
   height: 18.8rem;
   border-radius: 3%;
-  box-shadow: 0.3rem 0.3rem 0.3rem rgba(102, 153, 204, 0.6);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(102, 153, 204, 1);
 }
+
 .slider__img {
   width: 100%;
   transition: 0.5s;
@@ -56,11 +61,18 @@ img {
   height: 19.2rem;
 }
 
+.slider__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
 .slider__content {
   display: inline-flex;
   flex-direction: column;
   justify-content: start;
   height: 5rem;
+  width: 50%;
+  order: 0;
   overflow: hidden;
 }
 
@@ -68,6 +80,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: start;
+  align-items: center;
   height: 5rem;
   flex-shrink: 0;
   transition: 0.5s;
@@ -76,6 +89,8 @@ img {
 .navigation {
   display: flex;
   justify-content: end;
+  align-items: center;
+  order: 1;
 }
 
 .bar {
