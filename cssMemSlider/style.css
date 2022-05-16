@@ -172,3 +172,27 @@ input[name='control'] {
 #switch-four:checked ~ .slider__bottom > .slider__content > .slider__text {
   transform: translateY(-300%);
 }
+
+@media (min-width: 320px) and (max-width: 420px) {
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .slider__imgs {
+    width: 18rem;
+  }
+
+  img {
+    width: 18rem;
+  }
+
+  .circle {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .slider__content {
+    font-size: 0.8rem;
+  }
+}
